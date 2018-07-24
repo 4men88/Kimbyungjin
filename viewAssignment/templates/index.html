@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{#    <h1>Welcom to Homepage</h1>#}
+{#   {% for i in users %}#}
+{#    {{ i.email}}{{ i.username }}#}
+{#    {% endfor %}  #}
+
+{#    {{ users }}#}
+{##}
+{##}
+
+
+{#    <table class="table table-striped">#}
+{#    {%  for i in users %}#}
+{#        <tr>#}
+{#        <td>{{ i[0] }}</td>  <td>{{ i[1] }}</td>#}
+{#        </tr>#}
+{#    {%  endfor %}#}
+{# </table>#}
+
+
+
+{#    {{ users['a'] }}#}
+
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>이름</th>
+                <th>이메일</th>
+            </thead>
+            <tbody>
+            {%  for i in users %}
+                <tr>
+                    <td>{{ i.username }}</td>
+                    <td>{{ i.email }}</td>
+                </tr>
+            {%  endfor %}
+            </tbody>
+        </table>
+
+
+
+{% endblock %}
+

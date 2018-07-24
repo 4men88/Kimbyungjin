@@ -1,0 +1,2806 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[1]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">json</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[2]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span
+                                class="o">=</span><span class="p">(</span><span class="s2">&quot;kim&quot;</span><span
+                                class="p">,</span><span class="s2">&quot;lee&quot;</span><span class="p">,</span><span
+                                class="s2">&quot;park&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[3]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span
+                                class="o">=</span><span class="p">(</span><span class="s2">&quot;kim&quot;</span><span
+                                class="p">,</span><span class="s2">&quot;lee&quot;</span><span class="p">,</span><span
+                                class="s2">&quot;park&quot;</span><span class="p">)</span>
+<span class="n">age</span><span class="o">=</span><span class="p">[</span><span class="mi">28</span><span
+                                    class="p">,</span><span class="mi">32</span><span class="p">,</span><span
+                                    class="mi">25</span><span class="p">]</span>
+<span class="n">person</span><span class="o">=</span><span class="p">{</span><span
+                                    class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kim&quot;</span><span
+                                    class="p">,</span><span class="s2">&quot;age&quot;</span><span
+                                    class="p">:</span><span class="mi">30</span><span class="p">,</span><span
+                                    class="s2">&quot;car&quot;</span><span class="p">:</span><span
+                                    class="kc">False</span><span class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[4]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nameStr</span> <span
+                                class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span
+                                class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">ageStr</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">dumps</span><span class="p">(</span><span class="n">age</span><span
+                                    class="p">)</span>
+<span class="n">personStr</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">dumps</span><span class="p">(</span><span class="n">person</span><span
+                                    class="p">,</span> <span class="n">indent</span><span class="o">=</span><span
+                                    class="s2">&quot;    &quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[5]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span
+                                class="p">(</span><span class="n">personStr</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>{
+    &#34;name&#34;: &#34;kim&#34;,
+    &#34;age&#34;: 30,
+    &#34;car&#34;: false
+}
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[6]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">personStr</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[6]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>str</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[7]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kname</span> <span
+                                class="o">=</span> <span class="p">(</span><span class="s2">&quot;김&quot;</span><span
+                                class="p">,</span> <span class="s2">&quot;이&quot;</span><span class="p">,</span> <span
+                                class="s2">&quot;박&quot;</span><span class="p">)</span>
+<span class="n">knameStr</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">dumps</span><span class="p">(</span><span class="n">kname</span><span
+                                    class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">knameStr</span><span class="p">)</span>
+
+<span class="n">knameStr</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">dumps</span><span class="p">(</span><span class="n">kname</span><span
+                                    class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span
+                                    class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">knameStr</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#34;\uae40&#34;, &#34;\uc774&#34;, &#34;\ubc15&#34;]
+[&#34;김&#34;, &#34;이&#34;, &#34;박&#34;]
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[8]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">personObj</span> <span
+                                class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span
+                                class="p">(</span><span class="n">personStr</span><span class="p">)</span>
+
+<span class="n">person</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[8]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>{&#39;name&#39;: &#39;kim&#39;, &#39;age&#39;: 30, &#39;car&#39;: False}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[9]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">person</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[9]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>dict</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[10]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span> <span
+                                class="o">==</span> <span class="n">personObj</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[10]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>True</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[11]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">personObj</span><span
+                                class="p">[</span><span class="s2">&quot;car&quot;</span><span class="p">]</span><span
+                                class="o">=</span><span class="p">[</span><span class="s2">&quot;레이&quot;</span><span
+                                class="p">,</span><span class="s2">&quot;모닝&quot;</span><span class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[12]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">personObj</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[12]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>{&#39;name&#39;: &#39;kim&#39;, &#39;age&#39;: 30, &#39;car&#39;: [&#39;레이&#39;, &#39;모닝&#39;]}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[13]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span
+                                class="nb">open</span><span class="p">(</span><span
+                                class="s2">&quot;test.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span
+                                class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span
+                                class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span
+                                    class="n">personObj</span><span class="p">,</span> <span class="n">fp</span><span
+                                    class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[14]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span
+                                class="nb">open</span><span class="p">(</span><span
+                                class="s2">&quot;test.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span
+                                class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span
+                                class="p">:</span>
+    <span class="n">loadObj</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">load</span><span class="p">(</span><span class="n">fp</span><span
+                                    class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[15]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loadObj</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[15]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>{&#39;name&#39;: &#39;kim&#39;, &#39;age&#39;: 30, &#39;car&#39;: [&#39;레이&#39;, &#39;모닝&#39;]}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[16]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">personObj</span><span
+                                class="o">==</span><span class="n">loadObj</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[16]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>True</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[17]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">urllib.request</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[18]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span
+                                class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span
+                                class="s2">&quot;https://jsonplaceholder.typicode.com/posts/1&quot;</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[40]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resByte</span> <span
+                                class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">read</span><span
+                                class="p">()</span>
+<span class="n">resStr</span> <span class="o">=</span> <span class="n">resByte</span><span class="o">.</span><span
+                                    class="n">decodee</span><span class="p">(</span><span
+                                    class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">resObj</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">loads</span><span class="p">(</span><span class="n">resStr</span><span
+                                    class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-40-2cd20ebbcf24&gt;</span> in <span
+        class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> resByte <span class="ansi-yellow-intense-fg ansi-bold">=</span> resp<span
+        class="ansi-yellow-intense-fg ansi-bold">.</span>read<span
+        class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>resStr <span
+        class="ansi-yellow-intense-fg ansi-bold">=</span> resByte<span class="ansi-yellow-intense-fg ansi-bold">.</span>decodee<span
+        class="ansi-yellow-intense-fg ansi-bold">(</span><span
+        class="ansi-blue-intense-fg ansi-bold">&#34;utf-8&#34;</span><span
+        class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      3</span> resObj <span class="ansi-yellow-intense-fg ansi-bold">=</span> json<span
+        class="ansi-yellow-intense-fg ansi-bold">.</span>loads<span class="ansi-yellow-intense-fg ansi-bold">(</span>resStr<span
+        class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;bytes&#39; object has no attribute &#39;decodee&#39;</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">http</span><span
+                                class="p">:</span><span class="o">//</span><span class="n">openapi</span><span
+                                class="o">.</span><span class="n">airkorea</span><span class="o">.</span><span
+                                class="ow">or</span><span class="o">.</span><span class="n">kr</span><span
+                                class="o">/</span><span class="n">openapi</span><span class="o">/</span><span class="n">services</span><span
+                                class="o">/</span><span class="n">rest</span><span class="o">/</span><span class="n">ArpltnInforInqireSvc</span><span
+                                class="o">/</span>getMsrstnAcctoRltmMesureDnsty<span class="o">?</span>
+    <span class="n">serviceKey</span><span class="o">=</span><span class="n">ckzCRkQ0HOEcHoV</span><span
+                                    class="o">%</span><span class="k">2BZ5N0fDqDm6Jyp4oTXIZdL5NduqXd</span>%2BbEs%2BZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA%3D%3D\
+    <span class="o">&amp;</span><span class="n">numOfRows</span><span class="o">=</span><span class="mi">10</span>
+    <span class="o">&amp;</span><span class="n">pageSize</span><span class="o">=</span><span class="mi">10</span>
+    <span class="o">&amp;</span><span class="n">pageNo</span><span class="o">=</span><span class="mi">1</span>
+    <span class="o">&amp;</span><span class="n">startPage</span><span class="o">=</span><span class="mi">1</span>
+    <span class="o">&amp;</span><span class="n">stationName</span><span class="o">=%</span><span class="k">EC</span>%A2%85%EB%A1%9C%EA%B5%AC&amp;dataTerm=DAILY
+    <span class="o">&amp;</span><span class="n">ver</span><span class="o">=</span><span class="mf">1.3</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[41]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span
+                                class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;serviceKey&quot;</span><span class="p">:</span><span
+                                    class="s2">&quot;SCUDF%2BcNl7RFyueHtENc7</span><span class="si">%2F</span><span
+                                    class="s2">eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv</span><span
+                                    class="si">%2F</span><span
+                                    class="s2">YrFwdkemOK6P2t8NO5tOR3WFow%3D%3D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numOfRows&quot;</span><span class="p">:</span><span class="mi">10</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;pageNo&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;sidoName&quot;</span><span class="p">:</span><span class="kc">None</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;ver&quot;</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span>
+    <span class="s2">&quot;_returnType&quot;</span><span class="p">:</span><span class="s2">&quot;json&quot;</span>
+<span class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[42]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;sidoName&quot;</span><span
+                                class="p">]</span><span class="o">=</span><span class="s2">&quot;서울&quot;</span>
+<span class="c1">#서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[43]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span> <span
+                                class="s2">&quot;http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[44]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">urllib</span> <span class="k">import</span> <span class="n">parse</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[45]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span class="p">]</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span
+                                class="o">.</span><span class="n">unquote</span><span class="p">(</span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                class="p">])</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[45]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&#39;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[46]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramUrl</span> <span
+                                class="o">=</span> <span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span
+                                class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[47]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramUrl</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[47]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&#39;serviceKey=SCUDF%2BcNl7RFyueHtENc7%2FeZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv%2FYrFwdkemOK6P2t8NO5tOR3WFow%3D%3D&amp;numOfRows=10&amp;pageNo=1&amp;sidoName=%EC%84%9C%EC%9A%B8&amp;ver=1.3&amp;_returnType=json&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[27]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">paramUrl</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[27]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>str</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[28]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramBytes</span><span
+                                class="o">=</span><span class="n">paramUrl</span><span class="o">.</span><span
+                                class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[29]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">paramBytes</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[29]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>bytes</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[30]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span
+                                class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span
+                                class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">paramBytes</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[31]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span
+                                class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[32]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span
+                                class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span
+                                class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[33]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[33]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>b&#39;{&#34;list&#34;:[{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;48&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.029&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;25&#34;,&#34;pm10Value24&#34;:&#34;21&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;14&#34;,&#34;pm25Value24&#34;:&#34;13&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\xa4\x91\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;51&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xeb\xa1\x9c\xeb\xb3\x80\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.031&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;2&#34;,&#34;pm10Value&#34;:&#34;43&#34;,&#34;pm10Value24&#34;:&#34;30&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;21&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xed\x95\x9c\xea\xb0\x95\xeb\x8c\x80\xeb\xa1\x9c&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;47&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.027&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.009&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;23&#34;,&#34;pm10Value24&#34;:&#34;19&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;16&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;-&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\xa2\x85\xeb\xa1\x9c\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.6&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;61&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xeb\xa1\x9c\xeb\xb3\x80\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.028&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;25&#34;,&#34;pm25Grade&#34;:&#34;2&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;-&#34;,&#34;pm25Value24&#34;:&#34;20&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.006&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\xb2\xad\xea\xb3\x84\xec\xb2\x9c\xeb\xa1\x9c&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;70&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xeb\xa1\x9c\xeb\xb3\x80\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.042&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.005&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;20&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;15&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\xa2\x85\xeb\xa1\x9c&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;43&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.025&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.009&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;21&#34;,&#34;pm10Value24&#34;:&#34;19&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;14&#34;,&#34;pm25Value24&#34;:&#34;13&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.004&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\x9a\xa9\xec\x82\xb0\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.7&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;50&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.020&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.008&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;23&#34;,&#34;pm10Value24&#34;:&#34;22&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.007&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xea\xb4\x91\xec\xa7\x84\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;47&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.018&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;20&#34;,&#34;pm10Value24&#34;:&#34;21&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;19&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\x84\xb1\xeb\x8f\x99\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;65&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xeb\xa1\x9c\xeb\xb3\x80\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.039&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.008&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;27&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xea\xb0\x95\xeb\xb3\x80\xeb\xb6\x81\xeb\xa1\x9c&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;50&#34;,&#34;mangName&#34;:&#34;\xeb\x8f\x84\xec\x8b\x9c\xeb\x8c\x80\xea\xb8\xb0&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.019&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.010&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;-&#34;,&#34;pm10Value24&#34;:&#34;16&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.006&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;\xec\xa4\x91\xeb\x9e\x91\xea\xb5\xac&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;}],&#34;parm&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;khaiGrade&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;mangName&#34;:&#34;&#34;,&#34;no2Grade&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm10Value24&#34;:&#34;&#34;,&#34;pm25Grade&#34;:&#34;&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;pm25Value24&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#34;,&#34;sidoName&#34;:&#34;\xec\x84\x9c\xec\x9a\xb8&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;1.3&#34;},&#34;ArpltnInforInqireSvcVo&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;khaiGrade&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;mangName&#34;:&#34;&#34;,&#34;no2Grade&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm10Value24&#34;:&#34;&#34;,&#34;pm25Grade&#34;:&#34;&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;pm25Value24&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#34;,&#34;sidoName&#34;:&#34;\xec\x84\x9c\xec\x9a\xb8&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;1.3&#34;},&#34;totalCount&#34;:39}&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[34]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultStr</span> <span
+                                class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">decode</span><span
+                                class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[35]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultStr</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[35]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&#39;{&#34;list&#34;:[{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;48&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.029&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;25&#34;,&#34;pm10Value24&#34;:&#34;21&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;14&#34;,&#34;pm25Value24&#34;:&#34;13&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;중구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;51&#34;,&#34;mangName&#34;:&#34;도로변대기&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.031&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;2&#34;,&#34;pm10Value&#34;:&#34;43&#34;,&#34;pm10Value24&#34;:&#34;30&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;21&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;한강대로&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;47&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.027&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.009&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;23&#34;,&#34;pm10Value24&#34;:&#34;19&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;16&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;-&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;종로구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.6&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;61&#34;,&#34;mangName&#34;:&#34;도로변대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.028&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;25&#34;,&#34;pm25Grade&#34;:&#34;2&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;-&#34;,&#34;pm25Value24&#34;:&#34;20&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.006&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;청계천로&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;70&#34;,&#34;mangName&#34;:&#34;도로변대기&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.042&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.005&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;20&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;15&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;종로&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;43&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.025&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.009&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;21&#34;,&#34;pm10Value24&#34;:&#34;19&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;1&#34;,&#34;pm25Value&#34;:&#34;14&#34;,&#34;pm25Value24&#34;:&#34;13&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.004&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;용산구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.7&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;50&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.020&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.008&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;23&#34;,&#34;pm10Value24&#34;:&#34;22&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.007&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;광진구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;47&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.018&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.007&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;20&#34;,&#34;pm10Value24&#34;:&#34;21&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;19&#34;,&#34;pm25Value24&#34;:&#34;14&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;성동구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;2&#34;,&#34;khaiValue&#34;:&#34;65&#34;,&#34;mangName&#34;:&#34;도로변대기&#34;,&#34;no2Grade&#34;:&#34;2&#34;,&#34;no2Value&#34;:&#34;0.039&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.008&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;30&#34;,&#34;pm10Value24&#34;:&#34;27&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;강변북로&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;1&#34;,&#34;coValue&#34;:&#34;0.4&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-16 09:00&#34;,&#34;khaiGrade&#34;:&#34;1&#34;,&#34;khaiValue&#34;:&#34;50&#34;,&#34;mangName&#34;:&#34;도시대기&#34;,&#34;no2Grade&#34;:&#34;1&#34;,&#34;no2Value&#34;:&#34;0.019&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;1&#34;,&#34;o3Value&#34;:&#34;0.010&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;1&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;-&#34;,&#34;pm10Value24&#34;:&#34;16&#34;,&#34;pm25Grade&#34;:&#34;1&#34;,&#34;pm25Grade1h&#34;:&#34;2&#34;,&#34;pm25Value&#34;:&#34;17&#34;,&#34;pm25Value24&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;&#34;,&#34;so2Grade&#34;:&#34;1&#34;,&#34;so2Value&#34;:&#34;0.006&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;중랑구&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;&#34;}],&#34;parm&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;khaiGrade&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;mangName&#34;:&#34;&#34;,&#34;no2Grade&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm10Value24&#34;:&#34;&#34;,&#34;pm25Grade&#34;:&#34;&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;pm25Value24&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;1.3&#34;},&#34;ArpltnInforInqireSvcVo&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;coGrade&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataTerm&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;khaiGrade&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;mangName&#34;:&#34;&#34;,&#34;no2Grade&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Grade&#34;:&#34;&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Grade&#34;:&#34;&#34;,&#34;pm10Grade1h&#34;:&#34;&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm10Value24&#34;:&#34;&#34;,&#34;pm25Grade&#34;:&#34;&#34;,&#34;pm25Grade1h&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;pm25Value24&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;rnum&#34;:0,&#34;serviceKey&#34;:&#34;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Grade&#34;:&#34;&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;stationCode&#34;:&#34;&#34;,&#34;stationName&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;,&#34;ver&#34;:&#34;1.3&#34;},&#34;totalCount&#34;:39}&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[36]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">ast</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[37]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultDict</span><span
+                                class="o">=</span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span
+                                class="p">(</span><span class="n">resultStr</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[38]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">resultDict</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[38]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>dict</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[39]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultDict</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[39]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>{&#39;list&#39;: [{&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.5&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;48&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.029&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.007&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;25&#39;,
+   &#39;pm10Value24&#39;: &#39;21&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;1&#39;,
+   &#39;pm25Value&#39;: &#39;14&#39;,
+   &#39;pm25Value24&#39;: &#39;13&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.003&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;중구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.4&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;2&#39;,
+   &#39;khaiValue&#39;: &#39;51&#39;,
+   &#39;mangName&#39;: &#39;도로변대기&#39;,
+   &#39;no2Grade&#39;: &#39;2&#39;,
+   &#39;no2Value&#39;: &#39;0.031&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.007&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;2&#39;,
+   &#39;pm10Value&#39;: &#39;43&#39;,
+   &#39;pm10Value24&#39;: &#39;30&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;21&#39;,
+   &#39;pm25Value24&#39;: &#39;14&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.005&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;한강대로&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.4&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;47&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.027&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.009&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;23&#39;,
+   &#39;pm10Value24&#39;: &#39;19&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;16&#39;,
+   &#39;pm25Value24&#39;: &#39;14&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;&#39;,
+   &#39;so2Value&#39;: &#39;-&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;종로구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.6&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;2&#39;,
+   &#39;khaiValue&#39;: &#39;61&#39;,
+   &#39;mangName&#39;: &#39;도로변대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.028&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.007&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;30&#39;,
+   &#39;pm10Value24&#39;: &#39;25&#39;,
+   &#39;pm25Grade&#39;: &#39;2&#39;,
+   &#39;pm25Grade1h&#39;: &#39;&#39;,
+   &#39;pm25Value&#39;: &#39;-&#39;,
+   &#39;pm25Value24&#39;: &#39;20&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.006&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;청계천로&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.5&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;2&#39;,
+   &#39;khaiValue&#39;: &#39;70&#39;,
+   &#39;mangName&#39;: &#39;도로변대기&#39;,
+   &#39;no2Grade&#39;: &#39;2&#39;,
+   &#39;no2Value&#39;: &#39;0.042&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.005&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;30&#39;,
+   &#39;pm10Value24&#39;: &#39;20&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;1&#39;,
+   &#39;pm25Value&#39;: &#39;15&#39;,
+   &#39;pm25Value24&#39;: &#39;14&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.003&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;종로&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.4&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;43&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.025&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.009&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;21&#39;,
+   &#39;pm10Value24&#39;: &#39;19&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;1&#39;,
+   &#39;pm25Value&#39;: &#39;14&#39;,
+   &#39;pm25Value24&#39;: &#39;13&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.004&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;용산구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.7&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;50&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.020&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.008&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;23&#39;,
+   &#39;pm10Value24&#39;: &#39;22&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;17&#39;,
+   &#39;pm25Value24&#39;: &#39;15&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.007&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;광진구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.4&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;47&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.018&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.007&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;20&#39;,
+   &#39;pm10Value24&#39;: &#39;21&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;19&#39;,
+   &#39;pm25Value24&#39;: &#39;14&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.005&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;성동구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.5&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;2&#39;,
+   &#39;khaiValue&#39;: &#39;65&#39;,
+   &#39;mangName&#39;: &#39;도로변대기&#39;,
+   &#39;no2Grade&#39;: &#39;2&#39;,
+   &#39;no2Value&#39;: &#39;0.039&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.008&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;1&#39;,
+   &#39;pm10Value&#39;: &#39;30&#39;,
+   &#39;pm10Value24&#39;: &#39;27&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;17&#39;,
+   &#39;pm25Value24&#39;: &#39;15&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.003&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;강변북로&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;},
+  {&#39;_returnType&#39;: &#39;json&#39;,
+   &#39;coGrade&#39;: &#39;1&#39;,
+   &#39;coValue&#39;: &#39;0.4&#39;,
+   &#39;dataTerm&#39;: &#39;&#39;,
+   &#39;dataTime&#39;: &#39;2018-07-16 09:00&#39;,
+   &#39;khaiGrade&#39;: &#39;1&#39;,
+   &#39;khaiValue&#39;: &#39;50&#39;,
+   &#39;mangName&#39;: &#39;도시대기&#39;,
+   &#39;no2Grade&#39;: &#39;1&#39;,
+   &#39;no2Value&#39;: &#39;0.019&#39;,
+   &#39;numOfRows&#39;: &#39;10&#39;,
+   &#39;o3Grade&#39;: &#39;1&#39;,
+   &#39;o3Value&#39;: &#39;0.010&#39;,
+   &#39;pageNo&#39;: &#39;1&#39;,
+   &#39;pm10Grade&#39;: &#39;1&#39;,
+   &#39;pm10Grade1h&#39;: &#39;&#39;,
+   &#39;pm10Value&#39;: &#39;-&#39;,
+   &#39;pm10Value24&#39;: &#39;16&#39;,
+   &#39;pm25Grade&#39;: &#39;1&#39;,
+   &#39;pm25Grade1h&#39;: &#39;2&#39;,
+   &#39;pm25Value&#39;: &#39;17&#39;,
+   &#39;pm25Value24&#39;: &#39;15&#39;,
+   &#39;resultCode&#39;: &#39;&#39;,
+   &#39;resultMsg&#39;: &#39;&#39;,
+   &#39;rnum&#39;: 0,
+   &#39;serviceKey&#39;: &#39;&#39;,
+   &#39;sidoName&#39;: &#39;&#39;,
+   &#39;so2Grade&#39;: &#39;1&#39;,
+   &#39;so2Value&#39;: &#39;0.006&#39;,
+   &#39;stationCode&#39;: &#39;&#39;,
+   &#39;stationName&#39;: &#39;중랑구&#39;,
+   &#39;totalCount&#39;: &#39;&#39;,
+   &#39;ver&#39;: &#39;&#39;}],
+ &#39;parm&#39;: {&#39;_returnType&#39;: &#39;json&#39;,
+  &#39;coGrade&#39;: &#39;&#39;,
+  &#39;coValue&#39;: &#39;&#39;,
+  &#39;dataTerm&#39;: &#39;&#39;,
+  &#39;dataTime&#39;: &#39;&#39;,
+  &#39;khaiGrade&#39;: &#39;&#39;,
+  &#39;khaiValue&#39;: &#39;&#39;,
+  &#39;mangName&#39;: &#39;&#39;,
+  &#39;no2Grade&#39;: &#39;&#39;,
+  &#39;no2Value&#39;: &#39;&#39;,
+  &#39;numOfRows&#39;: &#39;10&#39;,
+  &#39;o3Grade&#39;: &#39;&#39;,
+  &#39;o3Value&#39;: &#39;&#39;,
+  &#39;pageNo&#39;: &#39;1&#39;,
+  &#39;pm10Grade&#39;: &#39;&#39;,
+  &#39;pm10Grade1h&#39;: &#39;&#39;,
+  &#39;pm10Value&#39;: &#39;&#39;,
+  &#39;pm10Value24&#39;: &#39;&#39;,
+  &#39;pm25Grade&#39;: &#39;&#39;,
+  &#39;pm25Grade1h&#39;: &#39;&#39;,
+  &#39;pm25Value&#39;: &#39;&#39;,
+  &#39;pm25Value24&#39;: &#39;&#39;,
+  &#39;resultCode&#39;: &#39;&#39;,
+  &#39;resultMsg&#39;: &#39;&#39;,
+  &#39;rnum&#39;: 0,
+  &#39;serviceKey&#39;: &#39;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#39;,
+  &#39;sidoName&#39;: &#39;서울&#39;,
+  &#39;so2Grade&#39;: &#39;&#39;,
+  &#39;so2Value&#39;: &#39;&#39;,
+  &#39;stationCode&#39;: &#39;&#39;,
+  &#39;stationName&#39;: &#39;&#39;,
+  &#39;totalCount&#39;: &#39;&#39;,
+  &#39;ver&#39;: &#39;1.3&#39;},
+ &#39;ArpltnInforInqireSvcVo&#39;: {&#39;_returnType&#39;: &#39;json&#39;,
+  &#39;coGrade&#39;: &#39;&#39;,
+  &#39;coValue&#39;: &#39;&#39;,
+  &#39;dataTerm&#39;: &#39;&#39;,
+  &#39;dataTime&#39;: &#39;&#39;,
+  &#39;khaiGrade&#39;: &#39;&#39;,
+  &#39;khaiValue&#39;: &#39;&#39;,
+  &#39;mangName&#39;: &#39;&#39;,
+  &#39;no2Grade&#39;: &#39;&#39;,
+  &#39;no2Value&#39;: &#39;&#39;,
+  &#39;numOfRows&#39;: &#39;10&#39;,
+  &#39;o3Grade&#39;: &#39;&#39;,
+  &#39;o3Value&#39;: &#39;&#39;,
+  &#39;pageNo&#39;: &#39;1&#39;,
+  &#39;pm10Grade&#39;: &#39;&#39;,
+  &#39;pm10Grade1h&#39;: &#39;&#39;,
+  &#39;pm10Value&#39;: &#39;&#39;,
+  &#39;pm10Value24&#39;: &#39;&#39;,
+  &#39;pm25Grade&#39;: &#39;&#39;,
+  &#39;pm25Grade1h&#39;: &#39;&#39;,
+  &#39;pm25Value&#39;: &#39;&#39;,
+  &#39;pm25Value24&#39;: &#39;&#39;,
+  &#39;resultCode&#39;: &#39;&#39;,
+  &#39;resultMsg&#39;: &#39;&#39;,
+  &#39;rnum&#39;: 0,
+  &#39;serviceKey&#39;: &#39;SCUDF+cNl7RFyueHtENc7/eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv/YrFwdkemOK6P2t8NO5tOR3WFow==&#39;,
+  &#39;sidoName&#39;: &#39;서울&#39;,
+  &#39;so2Grade&#39;: &#39;&#39;,
+  &#39;so2Value&#39;: &#39;&#39;,
+  &#39;stationCode&#39;: &#39;&#39;,
+  &#39;stationName&#39;: &#39;&#39;,
+  &#39;totalCount&#39;: &#39;&#39;,
+  &#39;ver&#39;: &#39;1.3&#39;},
+ &#39;totalCount&#39;: 39}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[219]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span
+                                class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;serviceKey&quot;</span><span class="p">:</span><span class="s2">&quot;ckzCRkQ0HOEcHoV%2BZ5N0fDqDm6Jyp4oTXIZdL5NduqXd%2BbEs%2BZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA%3D%3D&quot;</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;numOfRows&quot;</span><span class="p">:</span><span class="mi">10</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;pageNo&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;sidoName&quot;</span><span class="p">:</span><span class="kc">None</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;cityName&quot;</span><span class="p">:</span><span class="kc">None</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;searchCondition&quot;</span><span class="p">:</span><span class="s2">&quot;daily&quot;</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;_returnType&quot;</span><span class="p">:</span><span class="s2">&quot;json&quot;</span>
+<span class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[107]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span> <span
+                                class="s2">&quot;http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnMesureSidoLIst&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[130]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;sidoName&quot;</span><span
+                                class="p">]</span><span class="o">=</span><span class="s2">&quot;서울&quot;</span>
+<span class="c1">#서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[131]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;cityName&quot;</span><span
+                                class="p">]</span><span class="o">=</span><span class="s2">&quot;강남구&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[132]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">urllib</span> <span class="k">import</span> <span class="n">parse</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">]</span> <span class="o">=</span> <span class="n">urllib</span><span
+                                    class="o">.</span><span class="n">parse</span><span class="o">.</span><span
+                                    class="n">unquote</span><span class="p">(</span><span class="n">params</span><span
+                                    class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">])</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[132]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&#39;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[141]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[141]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>{&#39;serviceKey&#39;: &#39;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#39;,
+ &#39;numOfRows&#39;: 10,
+ &#39;pageNo&#39;: 1,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;searchCondition&#39;: &#39;daily&#39;,
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;강남구&#39;}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[133]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramUrl</span> <span
+                                class="o">=</span> <span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span
+                                class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[134]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramBytes</span><span
+                                class="o">=</span><span class="n">paramUrl</span><span class="o">.</span><span
+                                class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[135]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span
+                                class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span
+                                class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">paramBytes</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[136]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span
+                                class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[137]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span
+                                class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span
+                                class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[138]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultStr</span> <span
+                                class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">decode</span><span
+                                class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[139]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultStr</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[139]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&#39;{&#34;list&#34;:[{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강남구&#34;,&#34;cityNameEng&#34;:&#34;Gangnam-gu&#34;,&#34;coValue&#34;:&#34;0.3&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;001&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.016&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.022&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;15&#34;,&#34;pm25Value&#34;:&#34;8&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강동구&#34;,&#34;cityNameEng&#34;:&#34;Gangdong-gu&#34;,&#34;coValue&#34;:&#34;0.3&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;002&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.014&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.021&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;17&#34;,&#34;pm25Value&#34;:&#34;12&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.004&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강북구&#34;,&#34;cityNameEng&#34;:&#34;Gangbuk-gu&#34;,&#34;coValue&#34;:&#34;0.2&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;003&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.010&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.028&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;19&#34;,&#34;pm25Value&#34;:&#34;13&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강서구&#34;,&#34;cityNameEng&#34;:&#34;Gangseo-gu&#34;,&#34;coValue&#34;:&#34;0.2&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;004&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.014&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.025&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;19&#34;,&#34;pm25Value&#34;:&#34;7&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.002&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;관악구&#34;,&#34;cityNameEng&#34;:&#34;Gwanak-gu&#34;,&#34;coValue&#34;:&#34;0.2&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;005&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.011&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.037&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;20&#34;,&#34;pm25Value&#34;:&#34;9&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.003&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;광진구&#34;,&#34;cityNameEng&#34;:&#34;Gwangjin-gu&#34;,&#34;coValue&#34;:&#34;0.5&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;006&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.010&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.026&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;16&#34;,&#34;pm25Value&#34;:&#34;5&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.006&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;구로구&#34;,&#34;cityNameEng&#34;:&#34;Guro-gu&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;007&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;15&#34;,&#34;pm25Value&#34;:&#34;8&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;금천구&#34;,&#34;cityNameEng&#34;:&#34;Geumcheon-gu&#34;,&#34;coValue&#34;:&#34;0.2&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;008&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.014&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.036&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;20&#34;,&#34;pm25Value&#34;:&#34;15&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.004&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;노원구&#34;,&#34;cityNameEng&#34;:&#34;Nowon-gu&#34;,&#34;coValue&#34;:&#34;0.3&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;009&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.011&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.026&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;22&#34;,&#34;pm25Value&#34;:&#34;16&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.005&#34;,&#34;totalCount&#34;:&#34;&#34;},{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;도봉구&#34;,&#34;cityNameEng&#34;:&#34;Dobong-gu&#34;,&#34;coValue&#34;:&#34;0.6&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;2018-07-13 15:00&#34;,&#34;districtCode&#34;:&#34;02&#34;,&#34;districtNumSeq&#34;:&#34;010&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;0.011&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;0.027&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;21&#34;,&#34;pm25Value&#34;:&#34;12&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;&#34;,&#34;serviceKey&#34;:&#34;&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;0.004&#34;,&#34;totalCount&#34;:&#34;&#34;}],&#34;parm&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강남구&#34;,&#34;cityNameEng&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;districtCode&#34;:&#34;&#34;,&#34;districtNumSeq&#34;:&#34;&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;DAILY&#34;,&#34;serviceKey&#34;:&#34;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;},&#34;CtprvnMesureLIstVo2&#34;:{&#34;_returnType&#34;:&#34;json&#34;,&#34;cityName&#34;:&#34;강남구&#34;,&#34;cityNameEng&#34;:&#34;&#34;,&#34;coValue&#34;:&#34;&#34;,&#34;dataGubun&#34;:&#34;&#34;,&#34;dataTime&#34;:&#34;&#34;,&#34;districtCode&#34;:&#34;&#34;,&#34;districtNumSeq&#34;:&#34;&#34;,&#34;itemCode&#34;:&#34;&#34;,&#34;khaiValue&#34;:&#34;&#34;,&#34;no2Value&#34;:&#34;&#34;,&#34;numOfRows&#34;:&#34;10&#34;,&#34;o3Value&#34;:&#34;&#34;,&#34;pageNo&#34;:&#34;1&#34;,&#34;pm10Value&#34;:&#34;&#34;,&#34;pm25Value&#34;:&#34;&#34;,&#34;resultCode&#34;:&#34;&#34;,&#34;resultMsg&#34;:&#34;&#34;,&#34;searchCondition&#34;:&#34;DAILY&#34;,&#34;serviceKey&#34;:&#34;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#34;,&#34;sidoName&#34;:&#34;서울&#34;,&#34;so2Value&#34;:&#34;&#34;,&#34;totalCount&#34;:&#34;&#34;},&#34;totalCount&#34;:600}&#39;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[140]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">ast</span>
+<span class="n">resultDict</span><span class="o">=</span><span class="n">ast</span><span class="o">.</span><span
+                                    class="n">literal_eval</span><span class="p">(</span><span
+                                    class="n">resultStr</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[105]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resultDict</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[105]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>{&#39;list&#39;: [],
+ &#39;parm&#39;: {&#39;_returnType&#39;: &#39;json&#39;,
+  &#39;cityName&#39;: &#39;&#39;,
+  &#39;cityNameEng&#39;: &#39;&#39;,
+  &#39;coValue&#39;: &#39;&#39;,
+  &#39;dataGubun&#39;: &#39;&#39;,
+  &#39;dataTime&#39;: &#39;&#39;,
+  &#39;districtCode&#39;: &#39;&#39;,
+  &#39;districtNumSeq&#39;: &#39;&#39;,
+  &#39;itemCode&#39;: &#39;&#39;,
+  &#39;khaiValue&#39;: &#39;&#39;,
+  &#39;no2Value&#39;: &#39;&#39;,
+  &#39;numOfRows&#39;: &#39;10&#39;,
+  &#39;o3Value&#39;: &#39;&#39;,
+  &#39;pageNo&#39;: &#39;1&#39;,
+  &#39;pm10Value&#39;: &#39;&#39;,
+  &#39;pm25Value&#39;: &#39;&#39;,
+  &#39;resultCode&#39;: &#39;&#39;,
+  &#39;resultMsg&#39;: &#39;&#39;,
+  &#39;searchCondition&#39;: &#39;DAILY&#39;,
+  &#39;serviceKey&#39;: &#39;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#39;,
+  &#39;sidoName&#39;: &#39;강남구&#39;,
+  &#39;so2Value&#39;: &#39;&#39;,
+  &#39;totalCount&#39;: &#39;&#39;},
+ &#39;CtprvnMesureLIstVo2&#39;: {&#39;_returnType&#39;: &#39;json&#39;,
+  &#39;cityName&#39;: &#39;&#39;,
+  &#39;cityNameEng&#39;: &#39;&#39;,
+  &#39;coValue&#39;: &#39;&#39;,
+  &#39;dataGubun&#39;: &#39;&#39;,
+  &#39;dataTime&#39;: &#39;&#39;,
+  &#39;districtCode&#39;: &#39;&#39;,
+  &#39;districtNumSeq&#39;: &#39;&#39;,
+  &#39;itemCode&#39;: &#39;&#39;,
+  &#39;khaiValue&#39;: &#39;&#39;,
+  &#39;no2Value&#39;: &#39;&#39;,
+  &#39;numOfRows&#39;: &#39;10&#39;,
+  &#39;o3Value&#39;: &#39;&#39;,
+  &#39;pageNo&#39;: &#39;1&#39;,
+  &#39;pm10Value&#39;: &#39;&#39;,
+  &#39;pm25Value&#39;: &#39;&#39;,
+  &#39;resultCode&#39;: &#39;&#39;,
+  &#39;resultMsg&#39;: &#39;&#39;,
+  &#39;searchCondition&#39;: &#39;DAILY&#39;,
+  &#39;serviceKey&#39;: &#39;ckzCRkQ0HOEcHoV+Z5N0fDqDm6Jyp4oTXIZdL5NduqXd+bEs+ZOvsAgOmvuR2YgF5uNI88ARNfA726SEAAAHKA==&#39;,
+  &#39;sidoName&#39;: &#39;강남구&#39;,
+  &#39;so2Value&#39;: &#39;&#39;,
+  &#39;totalCount&#39;: &#39;&#39;},
+ &#39;totalCount&#39;: 0}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h1 id="XML-&#53580;&#49828;&#53944;">XML &#53580;&#49828;&#53944;<a class="anchor-link"
+                                                                                         href="#XML-&#53580;&#49828;&#53944;">&#182;</a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span
+                                class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;serviceKey&quot;</span><span class="p">:</span><span
+                                    class="s2">&quot;SCUDF%2BcNl7RFyueHtENc7</span><span class="si">%2F</span><span
+                                    class="s2">eZvKhuGEvWiYoHmJGnD2wIfTO6FLdsDiZCaMv</span><span
+                                    class="si">%2F</span><span
+                                    class="s2">YrFwdkemOK6P2t8NO5tOR3WFow%3D%3D&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numOfRows&quot;</span><span class="p">:</span><span class="mi">10</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;pageNo&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;sidoName&quot;</span><span class="p">:</span><span class="kc">None</span><span
+                                    class="p">,</span>
+    <span class="s2">&quot;ver&quot;</span><span class="p">:</span><span class="mf">1.3</span>
+<span class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;sidoName&quot;</span><span
+                                class="p">]</span><span class="o">=</span><span class="s2">&quot;서울&quot;</span>
+<span class="c1">#서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span class="p">]</span> <span
+                                class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span
+                                class="o">.</span><span class="n">unquote</span><span class="p">(</span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                class="p">])</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h1 id="XML">XML<a class="anchor-link" href="#XML">&#182;</a></h1>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[161]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">lxml</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[166]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span> <span
+                                class="k">as</span> <span class="n">et</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[167]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span
+                                class="p">(</span><span class="n">etree</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[167]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>[&#39;AncestorsIterator&#39;,
+ &#39;AttributeBasedElementClassLookup&#39;,
+ &#39;C14NError&#39;,
+ &#39;CDATA&#39;,
+ &#39;Comment&#39;,
+ &#39;CommentBase&#39;,
+ &#39;CustomElementClassLookup&#39;,
+ &#39;DEBUG&#39;,
+ &#39;DTD&#39;,
+ &#39;DTDError&#39;,
+ &#39;DTDParseError&#39;,
+ &#39;DTDValidateError&#39;,
+ &#39;DocInfo&#39;,
+ &#39;DocumentInvalid&#39;,
+ &#39;ETCompatXMLParser&#39;,
+ &#39;ETXPath&#39;,
+ &#39;Element&#39;,
+ &#39;ElementBase&#39;,
+ &#39;ElementChildIterator&#39;,
+ &#39;ElementClassLookup&#39;,
+ &#39;ElementDefaultClassLookup&#39;,
+ &#39;ElementDepthFirstIterator&#39;,
+ &#39;ElementNamespaceClassLookup&#39;,
+ &#39;ElementTextIterator&#39;,
+ &#39;ElementTree&#39;,
+ &#39;Entity&#39;,
+ &#39;EntityBase&#39;,
+ &#39;Error&#39;,
+ &#39;ErrorDomains&#39;,
+ &#39;ErrorLevels&#39;,
+ &#39;ErrorTypes&#39;,
+ &#39;Extension&#39;,
+ &#39;FallbackElementClassLookup&#39;,
+ &#39;FunctionNamespace&#39;,
+ &#39;HTML&#39;,
+ &#39;HTMLParser&#39;,
+ &#39;HTMLPullParser&#39;,
+ &#39;LIBXML_COMPILED_VERSION&#39;,
+ &#39;LIBXML_VERSION&#39;,
+ &#39;LIBXSLT_COMPILED_VERSION&#39;,
+ &#39;LIBXSLT_VERSION&#39;,
+ &#39;LXML_VERSION&#39;,
+ &#39;LxmlError&#39;,
+ &#39;LxmlRegistryError&#39;,
+ &#39;LxmlSyntaxError&#39;,
+ &#39;NamespaceRegistryError&#39;,
+ &#39;PI&#39;,
+ &#39;PIBase&#39;,
+ &#39;ParseError&#39;,
+ &#39;ParserBasedElementClassLookup&#39;,
+ &#39;ParserError&#39;,
+ &#39;ProcessingInstruction&#39;,
+ &#39;PyErrorLog&#39;,
+ &#39;PythonElementClassLookup&#39;,
+ &#39;QName&#39;,
+ &#39;RelaxNG&#39;,
+ &#39;RelaxNGError&#39;,
+ &#39;RelaxNGErrorTypes&#39;,
+ &#39;RelaxNGParseError&#39;,
+ &#39;RelaxNGValidateError&#39;,
+ &#39;Resolver&#39;,
+ &#39;Schematron&#39;,
+ &#39;SchematronError&#39;,
+ &#39;SchematronParseError&#39;,
+ &#39;SchematronValidateError&#39;,
+ &#39;SerialisationError&#39;,
+ &#39;SiblingsIterator&#39;,
+ &#39;SubElement&#39;,
+ &#39;TreeBuilder&#39;,
+ &#39;XInclude&#39;,
+ &#39;XIncludeError&#39;,
+ &#39;XML&#39;,
+ &#39;XMLDTDID&#39;,
+ &#39;XMLID&#39;,
+ &#39;XMLParser&#39;,
+ &#39;XMLPullParser&#39;,
+ &#39;XMLSchema&#39;,
+ &#39;XMLSchemaError&#39;,
+ &#39;XMLSchemaParseError&#39;,
+ &#39;XMLSchemaValidateError&#39;,
+ &#39;XMLSyntaxError&#39;,
+ &#39;XMLTreeBuilder&#39;,
+ &#39;XPath&#39;,
+ &#39;XPathDocumentEvaluator&#39;,
+ &#39;XPathElementEvaluator&#39;,
+ &#39;XPathError&#39;,
+ &#39;XPathEvalError&#39;,
+ &#39;XPathEvaluator&#39;,
+ &#39;XPathFunctionError&#39;,
+ &#39;XPathResultError&#39;,
+ &#39;XPathSyntaxError&#39;,
+ &#39;XSLT&#39;,
+ &#39;XSLTAccessControl&#39;,
+ &#39;XSLTApplyError&#39;,
+ &#39;XSLTError&#39;,
+ &#39;XSLTExtension&#39;,
+ &#39;XSLTExtensionError&#39;,
+ &#39;XSLTParseError&#39;,
+ &#39;XSLTSaveError&#39;,
+ &#39;_Attrib&#39;,
+ &#39;_BaseErrorLog&#39;,
+ &#39;_Comment&#39;,
+ &#39;_Document&#39;,
+ &#39;_DomainErrorLog&#39;,
+ &#39;_Element&#39;,
+ &#39;_ElementIterator&#39;,
+ &#39;_ElementMatchIterator&#39;,
+ &#39;_ElementStringResult&#39;,
+ &#39;_ElementTagMatcher&#39;,
+ &#39;_ElementTree&#39;,
+ &#39;_ElementUnicodeResult&#39;,
+ &#39;_Entity&#39;,
+ &#39;_ErrorLog&#39;,
+ &#39;_FeedParser&#39;,
+ &#39;_IDDict&#39;,
+ &#39;_ListErrorLog&#39;,
+ &#39;_LogEntry&#39;,
+ &#39;_ProcessingInstruction&#39;,
+ &#39;_RotatingErrorLog&#39;,
+ &#39;_SaxParserTarget&#39;,
+ &#39;_TargetParserResult&#39;,
+ &#39;_Validator&#39;,
+ &#39;_XPathEvaluatorBase&#39;,
+ &#39;_XSLTProcessingInstruction&#39;,
+ &#39;_XSLTResultTree&#39;,
+ &#39;__all__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__docformat__&#39;,
+ &#39;__file__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__pyx_capi__&#39;,
+ &#39;__spec__&#39;,
+ &#39;__test__&#39;,
+ &#39;__version__&#39;,
+ &#39;adopt_external_document&#39;,
+ &#39;cleanup_namespaces&#39;,
+ &#39;clear_error_log&#39;,
+ &#39;dump&#39;,
+ &#39;fromstring&#39;,
+ &#39;fromstringlist&#39;,
+ &#39;get_default_parser&#39;,
+ &#39;htmlfile&#39;,
+ &#39;iselement&#39;,
+ &#39;iterparse&#39;,
+ &#39;iterwalk&#39;,
+ &#39;memory_debugger&#39;,
+ &#39;parse&#39;,
+ &#39;parseid&#39;,
+ &#39;register_namespace&#39;,
+ &#39;set_default_parser&#39;,
+ &#39;set_element_class_lookup&#39;,
+ &#39;strip_attributes&#39;,
+ &#39;strip_elements&#39;,
+ &#39;strip_tags&#39;,
+ &#39;tostring&#39;,
+ &#39;tostringlist&#39;,
+ &#39;tounicode&#39;,
+ &#39;use_global_python_log&#39;,
+ &#39;xmlfile&#39;]</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[168]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bookstore</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">Element</span><span
+                                class="p">(</span><span class="s2">&quot;bookstore&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[169]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book1</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">SubElement</span><span
+                                class="p">(</span><span class="n">bookstore</span><span class="p">,</span><span
+                                class="s2">&quot;book&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[171]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book2</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">SubElement</span><span
+                                class="p">(</span><span class="n">bookstore</span><span class="p">,</span><span
+                                class="s2">&quot;book&quot;</span><span class="p">,</span><span
+                                class="n">attrib</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category&quot;</span><span
+                                class="p">:</span><span class="s2">&quot;children&quot;</span><span class="p">})</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[172]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book1</span><span
+                                class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span
+                                class="p">]</span><span class="o">=</span><span class="s2">&quot;cooking&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[173]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span
+                                class="p">(</span><span class="n">bookstore</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;Element bookstore at 0x1b57d95adc8&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[177]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">title1</span><span
+                                class="o">=</span><span class="n">et</span><span class="o">.</span><span class="n">Element</span><span
+                                class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[178]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">title1</span><span
+                                class="o">.</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Harry Potter&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[179]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">et</span><span
+                                class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">title1</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;title&gt;Harry Potter&lt;/title&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[182]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">title1</span><span
+                                class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;lang&quot;</span><span
+                                class="p">]</span> <span class="o">=</span> <span class="s2">&quot;en&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[183]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">book2</span><span
+                                class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title1</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[184]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">et</span><span
+                                class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">bookstore</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;bookstore&gt;
+  &lt;book category=&#34;cooking&#34;/&gt;
+  &lt;book category=&#34;children&#34;&gt;
+    &lt;title lang=&#34;en&#34;&gt;Harry Potter&lt;/title&gt;
+  &lt;/book&gt;
+&lt;/bookstore&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[185]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">et</span><span
+                                class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span
+                                class="n">book1</span><span class="p">,</span><span
+                                class="s2">&quot;title&quot;</span><span class="p">,</span> <span
+                                class="n">attrib</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lang&quot;</span><span
+                                class="p">:</span><span class="n">title1</span><span class="o">.</span><span class="n">attrib</span><span
+                                class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lang&quot;</span><span
+                                class="p">)})</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[185]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&lt;Element title at 0x1b57d97ba48&gt;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[187]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">et</span><span
+                                class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">bookstore</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;bookstore&gt;
+  &lt;book category=&#34;cooking&#34;&gt;
+    &lt;title lang=&#34;en&#34;/&gt;
+  &lt;/book&gt;
+  &lt;book category=&#34;children&#34;&gt;
+    &lt;title lang=&#34;en&#34;&gt;Harry Potter&lt;/title&gt;
+  &lt;/book&gt;
+&lt;/bookstore&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[195]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xmlByte</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">tostring</span><span
+                                class="p">(</span><span class="n">bookstore</span><span class="p">,</span> <span
+                                class="n">encoding</span><span class="o">=</span><span
+                                class="s2">&quot;utf-8&quot;</span> <span class="p">,</span><span class="n">xml_declaration</span><span
+                                class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#생성한 xml파일 (bookstore) 전송을 위해 byte 형 변환</span>
+<span class="c1">#형 변환시, xml 파일임을 명시 + encoding type 명시</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[196]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span
+                                class="p">(</span><span class="n">xmlByte</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>b&#39;&lt;?xml version=\&#39;1.0\&#39; encoding=\&#39;utf-8\&#39;?&gt;\n&lt;bookstore&gt;&lt;book category=&#34;cooking&#34;&gt;&lt;title lang=&#34;en&#34;/&gt;&lt;/book&gt;&lt;book category=&#34;children&#34;&gt;&lt;title lang=&#34;en&#34;&gt;Harry Potter&lt;/title&gt;&lt;/book&gt;&lt;/bookstore&gt;&#39;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[201]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">fromstring</span><span
+                                class="p">(</span><span class="n">xmlByte</span><span class="p">)</span>
+
+<span class="c1">#xml 파일을 받아서 자동 형 변환 해줌....</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[202]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">et</span><span
+                                class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">temp</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;bookstore&gt;
+  &lt;book category=&#34;cooking&#34;&gt;
+    &lt;title lang=&#34;en&#34;/&gt;
+  &lt;/book&gt;
+  &lt;book category=&#34;children&#34;&gt;
+    &lt;title lang=&#34;en&#34;&gt;Harry Potter&lt;/title&gt;
+  &lt;/book&gt;
+&lt;/bookstore&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[203]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tree</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">ElementTree</span><span
+                                class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[204]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span
+                                class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span
+                                class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[210]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span
+                                class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">docinfo</span><span
+                                class="o">.</span><span class="n">xml_version</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">docinfo</span><span
+                                    class="o">.</span><span class="n">encoding</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">docinfo</span><span
+                                    class="o">.</span><span class="n">root_name</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0
+utf-8
+bookstore
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[211]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span
+                                class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">root</span><span
+                                class="p">))</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[217]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span
+                                class="n">childNode</span> <span class="ow">in</span> <span class="n">root</span><span
+                                class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">childNode</span><span class="o">.</span><span
+                                    class="n">tag</span><span class="p">,</span> <span class="n">childNode</span><span
+                                    class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>book {&#39;category&#39;: &#39;cooking&#39;}
+book {&#39;category&#39;: &#39;children&#39;}
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[232]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">apiTree</span> <span
+                                class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">fromstring</span><span
+                                class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_text output_error">
+<pre>
+Traceback <span class="ansi-cyan-intense-fg ansi-bold">(most recent call last)</span>:
+
+  File <span
+        class="ansi-green-fg">&#34;C:\Users\4men8\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py&#34;</span>, line <span
+        class="ansi-green-fg">2963</span>, in <span class="ansi-magenta-fg">run_code</span>
+    exec(code_obj, self.user_global_ns, self.user_ns)
+
+  File <span class="ansi-green-fg">&#34;&lt;ipython-input-232-dc485caeb744&gt;&#34;</span>, line <span
+        class="ansi-green-fg">1</span>, in <span class="ansi-magenta-fg">&lt;module&gt;</span>
+    apiTree = et.fromstring(result)
+
+  File <span class="ansi-green-fg">&#34;src/lxml/etree.pyx&#34;</span>, line <span class="ansi-green-fg">3213</span>, in <span
+        class="ansi-magenta-fg">lxml.etree.fromstring</span>
+
+  File <span class="ansi-green-fg">&#34;src/lxml/parser.pxi&#34;</span>, line <span class="ansi-green-fg">1876</span>, in <span
+        class="ansi-magenta-fg">lxml.etree._parseMemoryDocument</span>
+
+  File <span class="ansi-green-fg">&#34;src/lxml/parser.pxi&#34;</span>, line <span class="ansi-green-fg">1764</span>, in <span
+        class="ansi-magenta-fg">lxml.etree._parseDoc</span>
+
+  File <span class="ansi-green-fg">&#34;src/lxml/parser.pxi&#34;</span>, line <span class="ansi-green-fg">1126</span>, in <span
+        class="ansi-magenta-fg">lxml.etree._BaseParser._parseDoc</span>
+
+  File <span class="ansi-green-fg">&#34;src/lxml/parser.pxi&#34;</span>, line <span class="ansi-green-fg">600</span>, in <span
+        class="ansi-magenta-fg">lxml.etree._ParserContext._handleParseResultDoc</span>
+
+  File <span class="ansi-green-fg">&#34;src/lxml/parser.pxi&#34;</span>, line <span class="ansi-green-fg">710</span>, in <span
+        class="ansi-magenta-fg">lxml.etree._handleParseResult</span>
+
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;src/lxml/parser.pxi&#34;</span><span
+        class="ansi-cyan-intense-fg ansi-bold">, line </span><span
+        class="ansi-green-intense-fg ansi-bold">639</span><span class="ansi-cyan-intense-fg ansi-bold">, in </span><span
+        class="ansi-magenta-intense-fg ansi-bold">lxml.etree._raiseParseError</span>
+
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;string&gt;&#34;</span><span
+        class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
+<span class="ansi-red-intense-fg ansi-bold">XMLSyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> Start tag expected, &#39;&lt;&#39; not found, line 1, column 1
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
